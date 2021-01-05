@@ -1,5 +1,4 @@
 name: Tag Release
-author: Squaremouth Inc
 
 on:
   push:
