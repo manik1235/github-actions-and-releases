@@ -1,0 +1,16 @@
+name: Version Forget-Me-Not
+
+on:
+  pull_request:
+    branches:
+      - master
+    types: [opened, synchronize]
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: manik1235/version-forget-me-not@v1
+        env:
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION_FILE_PATH: "composer.json"
